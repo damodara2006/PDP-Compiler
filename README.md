@@ -1,3 +1,4 @@
+![Preview](image.png)
 # Code Compiler
 
 Web-based multi-language code compiler with input handling support.
