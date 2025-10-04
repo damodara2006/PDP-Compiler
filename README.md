@@ -7,6 +7,7 @@ Web-based multi-language code compiler with input handling support.
 - Supports Python, Java, C, C++
 - Interactive input handling for scanf, input(), Scanner
 - Real-time compilation and execution
+- Dockerized deployment with EC2 backend
 
 ## Prerequisites
 ```bash
@@ -54,6 +55,23 @@ int main() {
 }
 ```
 
+## Deployment
+- **Frontend**: Can be deployed on any static hosting service
+- **Backend**: Deployed on AWS EC2 for secure code compilation
+
+## Docker Usage
+```bash
+# Build and run backend
+cd backend
+docker build -t compiler-backend .
+docker run -p 8081:8081 compiler-backend
+
+# Build and run frontend
+cd frontend
+docker build -t compiler-frontend .
+docker run -p 5173:5173 compiler-frontend
+```
+
 ## API
 `POST /compile` - `{code, language, input}` → output
 
@@ -62,7 +80,9 @@ int main() {
 backend/
   Controllers/compiler.js  # Language handlers
   index.js                # Express server
+  Dockerfile              # Backend container config
 frontend/
   src/Compiler.jsx        # Main React component
+  Dockerfile              # Frontend container config
 ```
 
