@@ -16,7 +16,7 @@ Node.js, Python 3, Java JDK, GCC
 ## Quick Start
 ```bash
 # Clone and setup
-git clone <repo-url>
+git clone https://github.com/damodara2006/PDP-Compiler.git
 cd Code-compiler
 
 # Install dependencies
@@ -24,7 +24,7 @@ cd backend && npm install
 cd ../frontend && npm install
 
 # Run backend (Terminal 1)
-cd backend && npm start
+cd backend && npm run dev
 
 # Run frontend (Terminal 2)  
 cd frontend && npm run dev
